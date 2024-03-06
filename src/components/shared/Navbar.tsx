@@ -37,8 +37,8 @@ const Navbar = () => {
             <Link href="/characters">
               <li className='ml-10 uppercase hover:border-b text-xl'>Characters</li>
             </Link>
-            <Link href="/rank">
-              <li className='ml-10 uppercase hover:border-b text-xl'>Ranking</li>
+            <Link href="/api/auth/signout">
+              <li className='ml-10 uppercase hover:border-b text-xl'>Sign Out</li>
             </Link>
           </ul>
         </div>
@@ -67,7 +67,7 @@ const Navbar = () => {
             <li onClick={() => setMenuOpen(false)} className="py-4 cursor-pointer"> Characters </li>
           </Link>
           <Link href="/">
-            <li onClick={() => setMenuOpen(false)} className="py-4 cursor-pointer"> Ranking </li>
+            <li onClick={() => setMenuOpen(false)} className="py-4 cursor-pointer"> Sign Out </li>
           </Link>
         </ul>
       </div>
