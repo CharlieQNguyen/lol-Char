@@ -21,32 +21,32 @@ export const options: NextAuthOptions = {
       clientId: GITHUB_ID,
       clientSecret: GITHUB_SECRET,
     }),
-    // CredentialsProvider({
-    //   name: "Credentials",
-    //   credentials: {
-    //     username: {
-    //       label: "Username:",
-    //       type: "text",
-    //       placeholder: "our-cool-username"
-    //     },
-    //     password: {
-    //       label: "Password:",
-    //       type: "password",
-    //       placeholder: "your-password"
-    //     }
-    //   },
-    //   async authorize(credentials) {
-    //     //where you would need to retrieve user data
-    //     //to verify with credentials
-    //     //https://next-auth.js.org/tutorials/ldap-auth-example
-    //     const user = { id: "43", name: "Jack", password: "nextauth"}
-    //     if(credentials?.username === user.name && credentials?.password === user.password) {
-    //       return user
-    //     } else {
-    //       return null
-    //     }
-    //   }
-    // })
+    CredentialsProvider({
+      name: "Credentials",
+      credentials: {
+        username: {
+          label: "Username:",
+          type: "text",
+          placeholder: "our-cool-username"
+        },
+        password: {
+          label: "Password:",
+          type: "password",
+          placeholder: "your-password"
+        }
+      },
+      async authorize(credentials) {
+        //where you would need to retrieve user data
+        //to verify with credentials
+        //https://next-auth.js.org/tutorials/ldap-auth-example
+        const user = { id: "43", name: "Jack", password: "nextauth"}
+        if(credentials?.username === user.name && credentials?.password === user.password) {
+          return user
+        } else {
+          return null
+        }
+      }
+    })
   ],
   secret: process.env.NEXTAUTH_SECRET
 }
