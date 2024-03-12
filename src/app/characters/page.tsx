@@ -42,7 +42,7 @@ const Char = () => {
   const baseLoadingImageUrl = "https://ddragon.leagueoflegends.com/cdn/img/champion/loading";
 
   return (
-    <div className="grid grid-cols-4 gap-5">
+    <div className="grid grid-cols-4 gap-5 m-4">
       {champions.map((champion) => (
         <div key={champion.id}>
           <h2>{champion.name}</h2>
