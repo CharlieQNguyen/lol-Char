@@ -10,12 +10,14 @@ export default async function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow">
-        {session? (
+      <main className="flex-grow relative">
+        <div className="absolute top-0 right-0 m-4 max-w-xs">
+        {session ? (
           <UserCard user={session?.user} pagetype={"Home"}/>
         ): (
-          <h1 className="text-5xl">Wrong User</h1>
+          <h1 className="text-5xl text-center">Wrong User</h1>
         )}
+        </div>
       </main>
       <Footer />
     </div>
