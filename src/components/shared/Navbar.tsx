@@ -16,7 +16,7 @@ const Navbar = () => {
     setMenuOpen(!menuOpen)
   }
   return (
-    <nav className='fixed w-full h-24 shadow-xl bg-white'>
+    <nav className='fixed w-full h-24 shadow-xl bg-white z-50'>
       <div className='flex justify-between items-center h-full w-full px-5 2xl:px-16'>
         <Link href="/">
             <Image 
